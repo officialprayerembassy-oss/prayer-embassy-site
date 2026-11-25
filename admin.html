@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Website Admin | Prayer Embassy Ministries</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css"></head>
+<body class="adm">
+<div id="gate"><h2>Admin Login</h2><p>Enter the admin passcode to edit the website information.</p><form id="gform"><input type="password" id="gpass" placeholder="Passcode" autocomplete="current-password" required><button class="btn" type="submit">Unlock</button></form><p id="gmsg"></p></div>
+<div id="app" hidden>
+<div class="admbar"><div class="wrap"><b>Website Admin</b><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn dark" id="pv" type="button">Preview</button><button class="btn" id="dl" type="button">Download content.js</button><button class="btn dark" id="rs" type="button">Discard draft</button><button class="btn dark" id="lo" type="button">Log out</button></div></div></div>
+<div class="wrap"><p id="status">Make your changes, click Preview to check them, then Download content.js and upload it to replace data/content.js on your website.</p><div class="tabs" id="tabs"></div><div id="pane"></div></div>
+</div>
+<script src="data/content.js"></script><script src="assets/js/admin.js"></script>
+</body></html>

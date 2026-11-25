@@ -1,0 +1,105 @@
+/* ==========================================================
+   themes.css  -  optional looks for index.html
+   HOW TO USE
+   1. Keep themes.css in the same folder as index.html
+   2. In index.html, add this line just before </head>:
+        <link rel="stylesheet" href="themes.css">
+   3. Change the opening body tag to pick a look, for example:
+        <body class="theme-forest">
+      You can combine one COLOUR theme with one FONT style and
+      one CARD style, for example:
+        <body class="theme-burgundy font-modern cards-soft">
+   Remove the class (plain <body>) to go back to the original.
+   ========================================================== */
+
+
+/* ---------- COLOUR THEMES (pick one) ---------- */
+
+/* Forest green and cream */
+body.theme-forest{
+  --ink:#16261c; --navy:#1f4d34; --gold:#d9a441;
+  --paper:#f7f6ee; --card:#ffffff; --muted:#566457; --line:#dfe3d3;
+}
+body.theme-forest .hero{background:linear-gradient(160deg,#1f4d34,#0f2a1c)}
+body.theme-forest .alt-bg{background:#ecefe0}
+
+/* Burgundy and gold */
+body.theme-burgundy{
+  --ink:#2a1218; --navy:#6b1d2f; --gold:#d4a24a;
+  --paper:#fbf6f1; --card:#ffffff; --muted:#6d5659; --line:#ead9d2;
+}
+body.theme-burgundy .hero{background:linear-gradient(160deg,#6b1d2f,#3a0f19)}
+body.theme-burgundy .alt-bg{background:#f4e8e0}
+
+/* Sky blue and white (bright and light) */
+body.theme-sky{
+  --ink:#10283d; --navy:#1b6aa5; --gold:#f0b429;
+  --paper:#f5faff; --card:#ffffff; --muted:#506679; --line:#d6e4f0;
+}
+body.theme-sky .hero{background:linear-gradient(160deg,#1b6aa5,#0d3f66)}
+body.theme-sky .alt-bg{background:#e6f1fa}
+
+/* Purple and gold (royal) */
+body.theme-royal{
+  --ink:#1d1030; --navy:#4a2a82; --gold:#e0b04a;
+  --paper:#faf7fd; --card:#ffffff; --muted:#625878; --line:#e5dcf0;
+}
+body.theme-royal .hero{background:linear-gradient(160deg,#4a2a82,#241044)}
+body.theme-royal .alt-bg{background:#f0eaf8}
+
+/* Dark mode */
+body.theme-dark{
+  --ink:#eceaf5; --navy:#f2cf7a; --gold:#e0b04a;
+  --paper:#14131f; --card:#1e1d2e; --muted:#a8a5bd; --line:#2e2c44;
+}
+body.theme-dark .hero{background:linear-gradient(160deg,#23214d,#0c0b18)}
+body.theme-dark .alt-bg{background:#1a1928}
+body.theme-dark header{background:#0c0b18}
+body.theme-dark footer{background:#0c0b18}
+body.theme-dark .btn.dark{background:var(--gold);border-color:var(--gold);color:#14131f}
+body.theme-dark .hero h1{color:#fff}
+
+
+/* ---------- FONT STYLES (pick one, optional) ---------- */
+
+/* Clean modern: sans-serif everywhere */
+body.font-modern{--serif:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body.font-modern h1,
+body.font-modern h2,
+body.font-modern h3{font-weight:700;letter-spacing:-.01em}
+
+/* Traditional: serif everywhere */
+body.font-classic{--sans:Georgia,"Times New Roman",serif}
+body.font-classic{line-height:1.75}
+
+/* Larger text (easier for older readers) */
+body.font-large{font-size:18px}
+
+
+/* ---------- CARD STYLES (pick one, optional) ---------- */
+
+/* Soft: rounded corners and a light shadow */
+body.cards-soft .box,
+body.cards-soft .note{
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  border-color:transparent;
+}
+body.cards-soft .photo{border-radius:20px}
+body.cards-soft .btn{border-radius:999px}
+
+/* Sharp: square corners, thin borders */
+body.cards-sharp .box,
+body.cards-sharp .note,
+body.cards-sharp .photo,
+body.cards-sharp .btn{border-radius:0}
+
+/* Gold top line on every card */
+body.cards-topline .box{border-top:4px solid var(--gold)}
+
+
+/* ---------- HEADER OPTION ---------- */
+
+/* Light header instead of dark */
+body.header-light header{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+body.header-light nav a:hover{color:var(--navy)}
